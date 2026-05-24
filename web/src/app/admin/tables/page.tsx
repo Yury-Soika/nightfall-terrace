@@ -100,7 +100,7 @@ export default function AdminTablesPage() {
         </button>
       </div>
 
-      <div className="mt-6 border border-[#243447]">
+      <div className="mt-6 overflow-x-auto border border-[#243447]">
         {!loaded ? (
           <div className="px-5 py-10 text-center text-sm text-[#8b9bb4]">Loading…</div>
         ) : rows.length === 0 ? (

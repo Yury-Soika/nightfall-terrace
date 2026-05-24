@@ -201,7 +201,7 @@ export default function AdminBookingsPage() {
                 </span>
               )}
             </div>
-            <div className='border border-[#243447]'>
+            <div className='overflow-x-auto border border-[#243447]'>
               <BookingTable rows={todayRows} onCancel={cancel} onConfirm={confirm} emptyText='No reservations for today' />
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function AdminBookingsPage() {
                           {date < today ? 'completed' : 'confirmed'}
                         </span>
                       </p>
-                      <div className='border border-[#243447]'>
+                      <div className='overflow-x-auto border border-[#243447]'>
                         <BookingTable rows={group} onCancel={cancel} onConfirm={confirm} emptyText='' />
                       </div>
                     </div>
