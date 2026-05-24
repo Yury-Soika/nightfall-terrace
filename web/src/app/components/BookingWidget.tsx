@@ -56,10 +56,10 @@ const StepBar = ({ step }: { step: Step }) => (
             className={[
               "flex h-7 w-7 items-center justify-center text-[11px] font-medium transition-colors",
               i < step
-                ? "bg-[#d4a574] text-[#0a0e1a]"
+                ? "bg-[#d4a574] text-[#0f1621]"
                 : i === step
                   ? "border border-[#d4a574] text-[#d4a574]"
-                  : "border border-[#1e2d40] text-[#4a5872]",
+                  : "border border-[#243447] text-[#4a5872]",
             ].join(" ")}
           >
             {i < step ? (
@@ -83,7 +83,7 @@ const StepBar = ({ step }: { step: Step }) => (
           <div
             className={[
               "mx-3 mb-5 h-px w-10 sm:w-16 transition-colors",
-              i < step ? "bg-[#d4a574]" : "bg-[#1e2d40]",
+              i < step ? "bg-[#d4a574]" : "bg-[#243447]",
             ].join(" ")}
           />
         )}
@@ -173,12 +173,12 @@ const BookingWidget = () => {
     }
   };
 
-  const inputCls = "border border-[#1e2d40] bg-[#111d30] px-4 py-3 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
-  const btnPrimary = "border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed";
+  const inputCls = "border border-[#243447] bg-[#192438] px-4 py-3 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
+  const btnPrimary = "border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors duration-200 disabled:opacity-40 disabled:cursor-not-allowed";
   const btnBack = "text-[11px] uppercase tracking-[0.18em] text-[#4a5872] hover:text-[#f0ece4] transition-colors";
 
   return (
-    <section id="reservation" className="bg-[#0a0e1a] border-t border-[#1e2d40]">
+    <section id="reservation" className="bg-[#0f1621] border-t border-[#243447]">
       <div className="nt-container py-20 sm:py-24 lg:py-28">
         <div className="mx-auto max-w-2xl">
           <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">
@@ -200,7 +200,7 @@ const BookingWidget = () => {
             <div className="space-y-8">
               <div>
                 <p className="mb-4 text-[11px] uppercase tracking-[0.18em] text-[#8b9bb4]">Select a date</p>
-                <div className="inline-block border border-[#1e2d40] bg-[#0d1526] p-4">
+                <div className="inline-block border border-[#243447] bg-[#141e2d] p-4">
                   <DayPicker
                     mode="single"
                     selected={selectedDay}
@@ -210,15 +210,15 @@ const BookingWidget = () => {
                       root: "rdp-custom",
                       month_caption: "nt-display text-base font-light text-[#f0ece4] mb-3 px-1",
                       weekday: "text-[10px] uppercase tracking-[0.12em] text-[#4a5872] w-9 text-center pb-2",
-                      day: "w-9 h-9 text-sm text-[#f0ece4] hover:bg-[#111d30] transition-colors rounded-none",
+                      day: "w-9 h-9 text-sm text-[#f0ece4] hover:bg-[#192438] transition-colors rounded-none",
                       day_button: "w-full h-full flex items-center justify-center",
-                      selected: "!bg-[#d4a574] !text-[#0a0e1a]",
+                      selected: "!bg-[#d4a574] !text-[#0f1621]",
                       today: "font-semibold text-[#d4a574]",
                       disabled: "text-[#4a5872] cursor-not-allowed",
                       nav: "flex items-center justify-between mb-2",
                       button_previous: "p-1 text-[#8b9bb4] hover:text-[#f0ece4] transition-colors",
                       button_next: "p-1 text-[#8b9bb4] hover:text-[#f0ece4] transition-colors",
-                      weeks: "border-t border-[#1e2d40] pt-2",
+                      weeks: "border-t border-[#243447] pt-2",
                     }}
                   />
                 </div>
@@ -229,7 +229,7 @@ const BookingWidget = () => {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => setPartySize((n) => Math.max(1, n - 1))}
-                    className="flex h-10 w-10 items-center justify-center border border-[#1e2d40] text-[#f0ece4] hover:border-[#d4a574] hover:text-[#d4a574] transition-colors text-lg"
+                    className="flex h-10 w-10 items-center justify-center border border-[#243447] text-[#f0ece4] hover:border-[#d4a574] hover:text-[#d4a574] transition-colors text-lg"
                   >
                     −
                   </button>
@@ -238,7 +238,7 @@ const BookingWidget = () => {
                   </span>
                   <button
                     onClick={() => setPartySize((n) => n + 1)}
-                    className="flex h-10 w-10 items-center justify-center border border-[#1e2d40] text-[#f0ece4] hover:border-[#d4a574] hover:text-[#d4a574] transition-colors text-lg"
+                    className="flex h-10 w-10 items-center justify-center border border-[#243447] text-[#f0ece4] hover:border-[#d4a574] hover:text-[#d4a574] transition-colors text-lg"
                   >
                     +
                   </button>
@@ -258,7 +258,7 @@ const BookingWidget = () => {
           {step === 1 && availability && (
             <div className="space-y-8">
               {availability.blackout ? (
-                <div className="border border-[#1e2d40] bg-[#0d1526] p-6">
+                <div className="border border-[#243447] bg-[#141e2d] p-6">
                   <p className="text-sm text-[#8b9bb4]">
                     We&apos;re closed on this date{availability.reason ? ` — ${availability.reason}` : ""}.
                   </p>
@@ -278,7 +278,7 @@ const BookingWidget = () => {
                     <p className="mb-4 text-[11px] uppercase tracking-[0.18em] text-[#8b9bb4]">Choose a time</p>
 
                     {availability.slots.length === 0 ? (
-                      <div className="border border-[#1e2d40] bg-[#0d1526] p-6">
+                      <div className="border border-[#243447] bg-[#141e2d] p-6">
                         <p className="text-sm text-[#8b9bb4]">No time slots are available for this date.</p>
                         <button onClick={() => setStep(0)} className="mt-4 text-[11px] uppercase tracking-[0.18em] text-[#d4a574] underline underline-offset-2">
                           Pick another date
@@ -293,12 +293,12 @@ const BookingWidget = () => {
                             className={[
                               "px-5 py-3 text-sm border transition-colors duration-150",
                               selectedSlotId === s.id
-                                ? "bg-[#d4a574] border-[#d4a574] text-[#0a0e1a]"
-                                : "border-[#1e2d40] text-[#f0ece4] hover:border-[#d4a574]",
+                                ? "bg-[#d4a574] border-[#d4a574] text-[#0f1621]"
+                                : "border-[#243447] text-[#f0ece4] hover:border-[#d4a574]",
                             ].join(" ")}
                           >
                             {s.startTime}
-                            <span className={`ml-1 text-xs ${selectedSlotId === s.id ? "text-[#0a0e1a]/60" : "text-[#4a5872]"}`}>
+                            <span className={`ml-1 text-xs ${selectedSlotId === s.id ? "text-[#0f1621]/60" : "text-[#4a5872]"}`}>
                               – {s.endTime}
                             </span>
                           </button>
@@ -340,7 +340,7 @@ const BookingWidget = () => {
                   return (
                     <div key={type} className="mb-6">
                       <p className="mb-2 text-[10px] uppercase tracking-[0.18em] text-[#4a5872]">{labels[type]}</p>
-                      <div className="divide-y divide-[#1e2d40] border border-[#1e2d40]">
+                      <div className="divide-y divide-[#243447] border border-[#243447]">
                         {group.map((t) => {
                           const soldOut = t.availability.find((a) => a.slotId === selectedSlotId!)?.soldOut ?? false;
                           return (
@@ -353,20 +353,20 @@ const BookingWidget = () => {
                                 selectedTableId === t.id
                                   ? "bg-[#d4a574]"
                                   : soldOut
-                                    ? "bg-[#0d1526] opacity-40 cursor-not-allowed"
-                                    : "bg-[#0d1526] hover:bg-[#111d30]",
+                                    ? "bg-[#141e2d] opacity-40 cursor-not-allowed"
+                                    : "bg-[#141e2d] hover:bg-[#192438]",
                               ].join(" ")}
                             >
                               <div className="flex items-center justify-between gap-4">
                                 <div>
-                                  <p className={`text-sm font-medium ${selectedTableId === t.id ? "text-[#0a0e1a]" : "text-[#f0ece4]"}`}>
+                                  <p className={`text-sm font-medium ${selectedTableId === t.id ? "text-[#0f1621]" : "text-[#f0ece4]"}`}>
                                     {t.name}
                                   </p>
-                                  <p className={`mt-0.5 text-xs ${selectedTableId === t.id ? "text-[#0a0e1a]/60" : "text-[#8b9bb4]"}`}>
+                                  <p className={`mt-0.5 text-xs ${selectedTableId === t.id ? "text-[#0f1621]/60" : "text-[#8b9bb4]"}`}>
                                     Up to {t.capacity} {t.capacity === 1 ? "guest" : "guests"} · min spend ${(t.minSpendCents / 100).toFixed(0)}
                                   </p>
                                 </div>
-                                <span className={`shrink-0 text-[10px] uppercase tracking-[0.14em] ${selectedTableId === t.id ? "text-[#0a0e1a]/60" : soldOut ? "text-[#4a5872]" : "text-[#d4a574]"}`}>
+                                <span className={`shrink-0 text-[10px] uppercase tracking-[0.14em] ${selectedTableId === t.id ? "text-[#0f1621]/60" : soldOut ? "text-[#4a5872]" : "text-[#d4a574]"}`}>
                                   {soldOut ? "Unavailable" : selectedTableId === t.id ? "Selected" : "Available"}
                                 </span>
                               </div>
@@ -391,7 +391,7 @@ const BookingWidget = () => {
           {/* ── Step 3: Guest details + confirm ── */}
           {step === 3 && (
             <div className="space-y-8">
-              <div className="border border-[#1e2d40] divide-y divide-[#1e2d40]">
+              <div className="border border-[#243447] divide-y divide-[#243447]">
                 {[
                   { label: "Date", value: selectedDay?.toLocaleDateString("en-US", { weekday: "short", month: "long", day: "numeric" }) },
                   { label: "Time", value: `${chosenSlot?.startTime} – ${chosenSlot?.endTime}` },

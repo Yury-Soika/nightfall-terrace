@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-nt-bg: #0a0e1a;
-  --color-nt-surface: #0d1526;
-  --color-nt-surface2: #111d30;
-  --color-nt-border: #1e2d40;
+  --color-nt-bg: #0f1621;
+  --color-nt-surface: #141e2d;
+  --color-nt-surface2: #192438;
+  --color-nt-border: #243447;
   --color-nt-ink: #f0ece4;
   --color-nt-ink-soft: #8b9bb4;
   --color-nt-ink-muted: #4a5872;
@@ -18,7 +18,7 @@ body {
 
 body {
   color: #f0ece4;
-  background-color: #0a0e1a;
+  background-color: #0f1621;
   font-family: var(--font-nt-sans);
 }
 
@@ -81,7 +81,7 @@ body {
 /* ── react-day-picker overrides ─────────────────────────────── */
 .rdp-custom {
   --rdp-accent-color: #d4a574;
-  --rdp-background-color: #111d30;
+  --rdp-background-color: #192438;
   font-family: var(--font-nt-sans);
   margin: 0;
 }
@@ -90,5 +90,5 @@ body {
 }
 .rdp-custom .rdp-selected .rdp-day_button {
   background-color: #d4a574;
-  color: #0a0e1a;
+  color: #0f1621;
 }

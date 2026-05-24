@@ -6,8 +6,8 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#0a0e1a] pt-16">
-        <div className="border-b border-[#1e2d40]">
+      <main className="min-h-screen bg-[#0f1621] pt-16">
+        <div className="border-b border-[#243447]">
           <div className="nt-container py-16 sm:py-20">
             <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Nightfall Terrace</p>
             <h1 className="nt-display mt-3 text-5xl font-light italic text-[#f0ece4] sm:text-6xl">
@@ -38,14 +38,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="grid gap-px bg-[#1e2d40]">
+            <div className="grid gap-px bg-[#243447]">
               {[
                 { label: "Hours", title: "Tuesday – Sunday", sub: "5:00 pm – 1:00 am" },
                 { label: "Location", title: "34th Floor, Nocturne Bay", sub: "270° panoramic views" },
                 { label: "Dress code", title: "Smart casual", sub: "We ask guests to dress the part" },
                 { label: "Reservations", title: "Deposit-secured", sub: "Walk-ins subject to availability" },
               ].map((item) => (
-                <div key={item.label} className="bg-[#0d1526] p-8 sm:p-10">
+                <div key={item.label} className="bg-[#141e2d] p-8 sm:p-10">
                   <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">{item.label}</p>
                   <p className="nt-display mt-3 text-2xl font-light text-[#f0ece4]">{item.title}</p>
                   <p className="mt-1 text-sm text-[#8b9bb4]">{item.sub}</p>
@@ -55,7 +55,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="border-t border-[#1e2d40]">
+        <div className="border-t border-[#243447]">
           <div className="nt-container py-16 text-center">
             <p className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
               Join us for the evening
@@ -63,7 +63,7 @@ export default function AboutPage() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/#reservation"
-                className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200"
+                className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors duration-200"
               >
                 Reserve a table
               </Link>

@@ -49,7 +49,7 @@ function MenuCategory({ title, items }: { title: string; items: MenuItem[] }) {
   return (
     <div>
       <h3 className="nt-display mb-6 text-2xl font-light italic text-[#f0ece4]">{title}</h3>
-      <ul className="divide-y divide-[#1e2d40]">
+      <ul className="divide-y divide-[#243447]">
         {items.map((item) => (
           <li key={item.name} className="flex items-baseline justify-between gap-8 py-5">
             <div className="min-w-0">
@@ -72,8 +72,8 @@ export default function MenuPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#0a0e1a] pt-16">
-        <div className="border-b border-[#1e2d40]">
+      <main className="min-h-screen bg-[#0f1621] pt-16">
+        <div className="border-b border-[#243447]">
           <div className="nt-container py-16 sm:py-20">
             <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Nightfall Terrace</p>
             <h1 className="nt-display mt-3 text-5xl font-light italic text-[#f0ece4] sm:text-6xl">
@@ -87,7 +87,7 @@ export default function MenuPage() {
         </div>
 
         {/* Tab bar */}
-        <div className="sticky top-16 z-40 border-b border-[#1e2d40] bg-[#0a0e1a]/95 backdrop-blur-md">
+        <div className="sticky top-16 z-40 border-b border-[#243447] bg-[#0f1621]/95 backdrop-blur-md">
           <div className="nt-container">
             <div className="flex gap-8">
               {(["drinks", "food"] as Tab[]).map((t) => (
@@ -126,7 +126,7 @@ export default function MenuPage() {
           )}
         </div>
 
-        <div className="border-t border-[#1e2d40]">
+        <div className="border-t border-[#243447]">
           <div className="nt-container py-16 text-center">
             <p className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
               Ready for the evening?
@@ -136,7 +136,7 @@ export default function MenuPage() {
             </p>
             <Link
               href="/#reservation"
-              className="mt-8 inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200"
+              className="mt-8 inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors duration-200"
             >
               Reserve a table
             </Link>

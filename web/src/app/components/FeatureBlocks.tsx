@@ -21,9 +21,9 @@ const blocks = [
 export default function FeatureBlocks() {
   return (
     <section className="nt-section">
-      <div className="grid gap-px bg-[#1e2d40] md:grid-cols-3">
+      <div className="grid gap-px bg-[#243447] md:grid-cols-3">
         {blocks.map((b) => (
-          <div key={b.title} className="bg-[#0a0e1a] p-8 sm:p-10 hover:bg-[#0d1526] transition-colors">
+          <div key={b.title} className="bg-[#0f1621] p-8 sm:p-10 hover:bg-[#141e2d] transition-colors">
             <div className="text-[10px] font-medium uppercase tracking-[0.25em] text-[#d4a574]">
               {b.eyebrow}
             </div>

@@ -13,7 +13,7 @@ export default function Hero() {
         className="object-cover"
       />
       {/* Deep gradient overlay — heavier at top for nav legibility, heavier at bottom for text */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/70 via-[#0a0e1a]/30 to-[#0a0e1a]/80" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0f1621]/70 via-[#0f1621]/30 to-[#0f1621]/80" />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
         <p className="mb-5 text-[11px] uppercase tracking-[0.35em] text-[#d4a574]">
@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <a
             href="#reservation"
-            className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-300"
+            className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors duration-300"
           >
             Reserve a table
           </a>

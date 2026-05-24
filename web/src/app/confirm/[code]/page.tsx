@@ -21,13 +21,13 @@ export default async function ConfirmPage({
   const booking = await apiGet<Booking>(`/bookings/${code}`);
 
   return (
-    <main className="min-h-screen bg-[#0a0e1a] flex items-center justify-center px-6 py-16">
+    <main className="min-h-screen bg-[#0f1621] flex items-center justify-center px-6 py-16">
       <div className="w-full max-w-lg">
         <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Booking confirmed</p>
         <h1 className="nt-display mt-3 text-4xl font-light italic text-[#f0ece4]">{booking.venue.name}</h1>
         <p className="mt-2 text-sm text-[#8b9bb4]">Your reservation is confirmed. See you soon.</p>
 
-        <div className="mt-8 border border-[#1e2d40] divide-y divide-[#1e2d40]">
+        <div className="mt-8 border border-[#243447] divide-y divide-[#243447]">
           {[
             { label: "Reference", value: booking.bookingCode, mono: true },
             { label: "Date", value: `${booking.slot.date} · ${booking.slot.startTime}–${booking.slot.endTime}` },

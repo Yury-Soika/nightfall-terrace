@@ -22,7 +22,7 @@ const categories = [
 
 export default function MenuSection() {
   return (
-    <section id="menu" className="bg-[#0d1526] border-y border-[#1e2d40]">
+    <section id="menu" className="bg-[#141e2d] border-y border-[#243447]">
       <div className="nt-container py-20 sm:py-24">
         <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between mb-12">
           <div className="space-y-4">
@@ -37,16 +37,16 @@ export default function MenuSection() {
           </div>
           <Link
             href="/menu"
-            className="inline-flex shrink-0 items-center gap-3 border border-[#d4a574]/40 px-7 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] hover:border-[#d4a574] transition-colors duration-200"
+            className="inline-flex shrink-0 items-center gap-3 border border-[#d4a574]/40 px-7 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] hover:border-[#d4a574] transition-colors duration-200"
           >
             View full menu
             <span className="h-px w-6 bg-current" />
           </Link>
         </div>
 
-        <div className="grid gap-px bg-[#1e2d40] sm:grid-cols-3">
+        <div className="grid gap-px bg-[#243447] sm:grid-cols-3">
           {categories.map((cat) => (
-            <div key={cat.label} className="bg-[#0d1526] px-6 py-8 hover:bg-[#111d30] transition-colors">
+            <div key={cat.label} className="bg-[#141e2d] px-6 py-8 hover:bg-[#192438] transition-colors">
               <p className="nt-display text-2xl font-light text-[#f0ece4]">{cat.label}</p>
               <p className="mt-1 text-xs text-[#d4a574] uppercase tracking-[0.14em]">{cat.count}</p>
               <p className="mt-3 text-sm text-[#8b9bb4]">{cat.description}</p>

@@ -4,8 +4,8 @@ import { AdminProvider } from "./context";
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
     <AdminProvider>
-      <div className="min-h-screen bg-[#0a0e1a]">
-        <header className="border-b border-[#1e2d40] bg-[#0a0e1a]">
+      <div className="min-h-screen bg-[#0f1621]">
+        <header className="border-b border-[#243447] bg-[#0f1621]">
           <div className="mx-auto flex h-14 max-w-5xl items-center justify-between px-6">
             <Link href="/admin" className="nt-display text-base font-light italic text-[#f0ece4]">
               Nightfall Terrace <span className="ml-2 text-xs font-normal text-[#8b9bb4] not-italic">Admin</span>

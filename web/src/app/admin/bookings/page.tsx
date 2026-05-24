@@ -20,7 +20,7 @@ type Booking = {
 const STATUS_STYLES: Record<string, string> = {
   confirmed: 'bg-emerald-950/60 text-emerald-400 border-emerald-800',
   pending: 'bg-amber-950/60 text-amber-400 border-amber-800',
-  completed: 'bg-[#111d30] text-[#8b9bb4] border-[#1e2d40]',
+  completed: 'bg-[#192438] text-[#8b9bb4] border-[#243447]',
   cancelled: 'bg-rose-950/60 text-rose-400 border-rose-900',
 };
 
@@ -51,16 +51,16 @@ function BookingTable({ rows, onCancel, onConfirm, emptyText }: {
   }
   return (
     <table className='w-full text-left text-sm'>
-      <thead className='border-b border-[#1e2d40] bg-[#111d30]'>
+      <thead className='border-b border-[#243447] bg-[#192438]'>
         <tr>
           {['Code', 'Date & time', 'Table', 'Guest', 'Guests', 'Status', ''].map((h) => (
             <th key={h} className='px-5 py-3 text-[11px] uppercase tracking-[0.14em] font-medium text-[#8b9bb4]'>{h}</th>
           ))}
         </tr>
       </thead>
-      <tbody className='divide-y divide-[#1e2d40]'>
+      <tbody className='divide-y divide-[#243447]'>
         {rows.map((b) => (
-          <tr key={b.id} className='bg-[#0d1526] hover:bg-[#111d30] transition-colors [&>td]:align-middle'>
+          <tr key={b.id} className='bg-[#141e2d] hover:bg-[#192438] transition-colors [&>td]:align-middle'>
             <td className='px-5 py-3.5 font-mono text-xs text-[#f0ece4]'>{b.bookingCode}</td>
             <td className='px-5 py-3.5 text-[#f0ece4]'>
               {reservationDay(b) === '1970-01-01' && !b.serviceDate ? (
@@ -201,7 +201,7 @@ export default function AdminBookingsPage() {
                 </span>
               )}
             </div>
-            <div className='border border-[#1e2d40]'>
+            <div className='border border-[#243447]'>
               <BookingTable rows={todayRows} onCancel={cancel} onConfirm={confirm} emptyText='No reservations for today' />
             </div>
           </div>
@@ -228,13 +228,13 @@ export default function AdminBookingsPage() {
                     <div key={date}>
                       <p className='mb-2 text-[11px] uppercase tracking-[0.18em] text-[#4a5872]'>
                         {new Date(date + 'T00:00:00').toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })}
-                        <span className='ml-2 text-[#1e2d40]'>·</span>
+                        <span className='ml-2 text-[#243447]'>·</span>
                         <span className='ml-2'>
                           {group.filter((b) => b.status !== 'cancelled').length}{' '}
                           {date < today ? 'completed' : 'confirmed'}
                         </span>
                       </p>
-                      <div className='border border-[#1e2d40]'>
+                      <div className='border border-[#243447]'>
                         <BookingTable rows={group} onCancel={cancel} onConfirm={confirm} emptyText='' />
                       </div>
                     </div>

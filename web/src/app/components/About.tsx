@@ -31,22 +31,22 @@ export default function About() {
           </a>
         </div>
 
-        <div className="grid gap-px bg-[#1e2d40]">
-          <div className="bg-[#0d1526] p-8 sm:p-10">
+        <div className="grid gap-px bg-[#243447]">
+          <div className="bg-[#141e2d] p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">Hours</p>
             <p className="mt-3 nt-display text-2xl font-light text-[#f0ece4]">
               Tuesday – Sunday
             </p>
             <p className="mt-1 text-sm text-[#8b9bb4]">5:00 pm – 1:00 am</p>
           </div>
-          <div className="bg-[#0d1526] p-8 sm:p-10">
+          <div className="bg-[#141e2d] p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">Location</p>
             <p className="mt-3 nt-display text-2xl font-light text-[#f0ece4]">
               34th Floor, Nocturne Bay
             </p>
             <p className="mt-1 text-sm text-[#8b9bb4]">270° panoramic views</p>
           </div>
-          <div className="bg-[#0d1526] p-8 sm:p-10">
+          <div className="bg-[#141e2d] p-8 sm:p-10">
             <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">Reservations</p>
             <p className="mt-3 nt-display text-2xl font-light text-[#f0ece4]">
               Deposit-secured tables

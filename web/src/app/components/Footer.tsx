@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-[#1e2d40] bg-[#0a0e1a]">
+    <footer className="border-t border-[#243447] bg-[#0f1621]">
       <div className="nt-container py-14">
         <div className="flex flex-col gap-10 sm:flex-row sm:items-start sm:justify-between">
           <div className="space-y-2">
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#1e2d40] pt-6 flex items-center justify-between gap-4">
+        <div className="mt-12 border-t border-[#243447] pt-6 flex items-center justify-between gap-4">
           <p className="text-[10px] uppercase tracking-[0.2em] text-[#4a5872]">
             © {new Date().getFullYear()} Nightfall Terrace. All rights reserved.
           </p>

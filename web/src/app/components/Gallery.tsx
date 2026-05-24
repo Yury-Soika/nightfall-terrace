@@ -67,7 +67,7 @@ export default function Gallery() {
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/60 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0f1621]/60 via-transparent to-transparent" />
             </div>
             <div className="absolute bottom-0 left-0 right-0 p-4 flex items-baseline justify-between">
               <p className="nt-display text-base font-light text-[#f0ece4]">{s.title}</p>

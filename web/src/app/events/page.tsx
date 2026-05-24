@@ -64,7 +64,7 @@ export default function EventsPage() {
             priority
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/60 to-[#0a0e1a]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0f1621]/60 to-[#0f1621]" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
             <p className="mb-4 text-[11px] uppercase tracking-[0.35em] text-[#d4a574]">
               What's on
@@ -77,11 +77,11 @@ export default function EventsPage() {
 
         {/* Events list */}
         <section className="nt-section">
-          <div className="space-y-px bg-[#1e2d40]">
+          <div className="space-y-px bg-[#243447]">
             {events.map((ev) => (
               <div
                 key={ev.title}
-                className="group grid gap-0 bg-[#0a0e1a] hover:bg-[#0d1526] transition-colors md:grid-cols-[1fr_2fr]"
+                className="group grid gap-0 bg-[#0f1621] hover:bg-[#141e2d] transition-colors md:grid-cols-[1fr_2fr]"
               >
                 {/* Image */}
                 <div className="relative aspect-[4/3] overflow-hidden md:aspect-auto md:min-h-[220px]">
@@ -91,9 +91,9 @@ export default function EventsPage() {
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-[#0a0e1a]/30" />
+                  <div className="absolute inset-0 bg-[#0f1621]/30" />
                   {ev.tag && (
-                    <span className="absolute top-4 left-4 border border-[#d4a574]/60 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-[#d4a574] bg-[#0a0e1a]/70">
+                    <span className="absolute top-4 left-4 border border-[#d4a574]/60 px-2 py-0.5 text-[10px] uppercase tracking-[0.18em] text-[#d4a574] bg-[#0f1621]/70">
                       {ev.tag}
                     </span>
                   )}
@@ -103,7 +103,7 @@ export default function EventsPage() {
                 <div className="flex flex-col justify-center p-8 sm:p-10">
                   <div className="flex items-center gap-3 mb-4">
                     <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">{ev.day}</p>
-                    <span className="h-px w-4 bg-[#1e2d40]" />
+                    <span className="h-px w-4 bg-[#243447]" />
                     <p className="text-[11px] uppercase tracking-[0.2em] text-[#d4a574]">{ev.date}</p>
                   </div>
                   <h2 className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
@@ -139,7 +139,7 @@ export default function EventsPage() {
             </p>
             <Link
               href="/#reservation"
-              className="mt-4 inline-flex items-center gap-3 border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors"
+              className="mt-4 inline-flex items-center gap-3 border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors"
             >
               Get in touch
             </Link>

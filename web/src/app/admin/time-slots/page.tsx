@@ -12,7 +12,7 @@ type TimeSlotRow = {
   active: boolean;
 };
 
-const inputCls = "border border-[#1e2d40] bg-[#111d30] px-3 py-2 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
+const inputCls = "border border-[#243447] bg-[#192438] px-3 py-2 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
 
 const TimeSlotsAdminPage = () => {
   const { token } = useAdmin();
@@ -97,7 +97,7 @@ const TimeSlotsAdminPage = () => {
       {error && <p className="mt-4 text-sm text-rose-400">{error}</p>}
 
       <div className="mt-8 grid gap-6 lg:grid-cols-2">
-        <div className="border border-[#1e2d40] bg-[#0d1526] p-6">
+        <div className="border border-[#243447] bg-[#141e2d] p-6">
           <p className="text-[11px] uppercase tracking-[0.16em] text-[#8b9bb4]">Create time slot</p>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <label className="grid gap-1.5">
@@ -119,36 +119,36 @@ const TimeSlotsAdminPage = () => {
           <button
             onClick={create}
             disabled={saving || !startTime.trim() || !endTime.trim()}
-            className="mt-5 border border-[#d4a574] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors disabled:opacity-40"
+            className="mt-5 border border-[#d4a574] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors disabled:opacity-40"
           >
             {saving ? "Saving…" : "Add time slot"}
           </button>
         </div>
 
-        <div className="border border-[#1e2d40] bg-[#0d1526] p-6">
+        <div className="border border-[#243447] bg-[#141e2d] p-6">
           <p className="text-xs text-[#4a5872]">
             Tip: to block a specific date/time, add a blackout entry for that date.
           </p>
         </div>
       </div>
 
-      <div className="mt-8 border border-[#1e2d40]">
+      <div className="mt-8 border border-[#243447]">
         {!loaded ? (
           <div className="px-5 py-10 text-center text-sm text-[#8b9bb4]">Loading…</div>
         ) : rows.length === 0 ? (
           <div className="px-5 py-10 text-center text-sm text-[#8b9bb4]">No time slots found</div>
         ) : (
           <table className="w-full text-left text-sm">
-            <thead className="border-b border-[#1e2d40] bg-[#111d30]">
+            <thead className="border-b border-[#243447] bg-[#192438]">
               <tr>
                 {["Start", "End", "Active", ""].map((h) => (
                   <th key={h} className="px-5 py-3 text-[11px] uppercase tracking-[0.14em] font-medium text-[#8b9bb4]">{h}</th>
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#1e2d40]">
+            <tbody className="divide-y divide-[#243447]">
               {rows.map((r) => (
-                <tr key={r.id} className="bg-[#0d1526] hover:bg-[#111d30] transition-colors">
+                <tr key={r.id} className="bg-[#141e2d] hover:bg-[#192438] transition-colors">
                   <td className="px-5 py-3.5 text-[#f0ece4]">{r.startTime}</td>
                   <td className="px-5 py-3.5 text-[#f0ece4]">{r.endTime}</td>
                   <td className="px-5 py-3.5">

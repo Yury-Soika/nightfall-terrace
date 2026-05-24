@@ -34,7 +34,7 @@ function GalleryImage({ shot, ratio, onClick }: GalleryImageProps) {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0f1621]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div className="mt-3 flex items-baseline justify-between">
         <p className="nt-display text-base font-light text-[#f0ece4]">{shot.title}</p>
@@ -55,8 +55,8 @@ export default function GalleryPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#0a0e1a] pt-16">
-        <div className="border-b border-[#1e2d40]">
+      <main className="min-h-screen bg-[#0f1621] pt-16">
+        <div className="border-b border-[#243447]">
           <div className="nt-container py-16 sm:py-20">
             <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Nightfall Terrace</p>
             <h1 className="nt-display mt-3 text-5xl font-light italic text-[#f0ece4] sm:text-6xl">Gallery</h1>
@@ -85,7 +85,7 @@ export default function GalleryPage() {
           </div>
         </div>
 
-        <div className="border-t border-[#1e2d40]">
+        <div className="border-t border-[#243447]">
           <div className="nt-container py-16 text-center">
             <p className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
               Experience it in person
@@ -93,7 +93,7 @@ export default function GalleryPage() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/#reservation"
-                className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200"
+                className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors duration-200"
               >
                 Reserve a table
               </Link>

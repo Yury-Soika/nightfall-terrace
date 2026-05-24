@@ -5,7 +5,7 @@ import { useState } from "react";
 import { apiPost } from "@/lib/api";
 import { useAdmin } from "./context";
 
-const inputCls = "w-full border border-[#1e2d40] bg-[#111d30] px-3 py-2.5 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
+const inputCls = "w-full border border-[#243447] bg-[#192438] px-3 py-2.5 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
 
 const defaultAdminEmail =
   typeof process.env.NEXT_PUBLIC_ADMIN_EMAIL === "string"
@@ -61,7 +61,7 @@ export default function AdminPage() {
 
             <button
               disabled={loading}
-              className="w-full border border-[#d4a574] py-2.5 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors disabled:opacity-50"
+              className="w-full border border-[#d4a574] py-2.5 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors disabled:opacity-50"
             >
               {loading ? "Signing in…" : "Sign in"}
             </button>
@@ -95,7 +95,7 @@ export default function AdminPage() {
           <Link
             key={c.href}
             href={c.href}
-            className="group border border-[#1e2d40] bg-[#0d1526] p-7 hover:border-[#d4a574]/40 hover:bg-[#111d30] transition-colors"
+            className="group border border-[#243447] bg-[#141e2d] p-7 hover:border-[#d4a574]/40 hover:bg-[#192438] transition-colors"
           >
             <p className="text-base font-medium text-[#f0ece4]">{c.title}</p>
             <p className="mt-1 text-sm text-[#8b9bb4]">{c.desc}</p>

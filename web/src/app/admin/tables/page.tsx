@@ -21,7 +21,7 @@ const TYPE_LABELS: Record<string, string> = {
   vip: "VIP",
 };
 
-const inputCls = "border border-[#1e2d40] bg-[#111d30] px-3 py-2 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
+const inputCls = "border border-[#243447] bg-[#192438] px-3 py-2 text-sm text-[#f0ece4] outline-none focus:border-[#d4a574] transition-colors placeholder:text-[#4a5872]";
 
 export default function AdminTablesPage() {
   const { token } = useAdmin();
@@ -94,29 +94,29 @@ export default function AdminTablesPage() {
         <button
           onClick={create}
           disabled={!name.trim()}
-          className="border border-[#d4a574] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors disabled:opacity-40"
+          className="border border-[#d4a574] px-5 py-2 text-[11px] uppercase tracking-[0.16em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0f1621] transition-colors disabled:opacity-40"
         >
           Add table
         </button>
       </div>
 
-      <div className="mt-6 border border-[#1e2d40]">
+      <div className="mt-6 border border-[#243447]">
         {!loaded ? (
           <div className="px-5 py-10 text-center text-sm text-[#8b9bb4]">Loading…</div>
         ) : rows.length === 0 ? (
           <div className="px-5 py-10 text-center text-sm text-[#8b9bb4]">No tables yet</div>
         ) : (
           <table className="w-full text-left text-sm">
-            <thead className="border-b border-[#1e2d40] bg-[#111d30]">
+            <thead className="border-b border-[#243447] bg-[#192438]">
               <tr>
                 {["Name", "Type", "Capacity", "Min spend", ""].map((h) => (
                   <th key={h} className="px-5 py-3 text-[11px] uppercase tracking-[0.14em] font-medium text-[#8b9bb4]">{h}</th>
                 ))}
               </tr>
             </thead>
-            <tbody className="divide-y divide-[#1e2d40]">
+            <tbody className="divide-y divide-[#243447]">
               {rows.map((r) => (
-                <tr key={r.id} className="bg-[#0d1526] hover:bg-[#111d30] transition-colors">
+                <tr key={r.id} className="bg-[#141e2d] hover:bg-[#192438] transition-colors">
                   <td className="px-5 py-3.5 font-medium text-[#f0ece4]">{r.name}</td>
                   <td className="px-5 py-3.5 text-[#8b9bb4]">{TYPE_LABELS[r.type] ?? r.type}</td>
                   <td className="px-5 py-3.5 text-[#8b9bb4]">{r.capacity}</td>

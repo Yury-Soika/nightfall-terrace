@@ -10,7 +10,7 @@ const hours = [
 
 export default function Hours() {
   return (
-    <section id="hours" className="bg-[#0d1526] border-y border-[#1e2d40]">
+    <section id="hours" className="bg-[#141e2d] border-y border-[#243447]">
       <div className="nt-container py-20 sm:py-24">
         <div className="grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-24">
           <div className="space-y-5">
@@ -24,7 +24,7 @@ export default function Hours() {
             </p>
           </div>
 
-          <div className="border border-[#1e2d40] divide-y divide-[#1e2d40]">
+          <div className="border border-[#243447] divide-y divide-[#243447]">
             {hours.map((h) => (
               <div key={h.label} className="flex items-center justify-between px-6 py-4 gap-6">
                 <dt className="text-sm text-[#8b9bb4]">{h.label}</dt>
