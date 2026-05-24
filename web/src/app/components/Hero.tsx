@@ -4,45 +4,48 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen min-h-[620px] w-full overflow-hidden">
+    <section className="relative h-screen min-h-[640px] w-full overflow-hidden">
       <Image
-        src="/images/sunset/hero.png"
-        alt="Nightfall Terrace rooftop"
+        src="/images/gallery/aerial-rooftop-dusk.png"
+        alt="Nightfall Terrace rooftop at dusk"
         fill
         priority
         className="object-cover"
       />
-      <div className="absolute inset-0 bg-black/35" />
+      {/* Deep gradient overlay — heavier at top for nav legibility, heavier at bottom for text */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0e1a]/70 via-[#0a0e1a]/30 to-[#0a0e1a]/80" />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-        <p className="mb-5 text-[11px] uppercase tracking-[0.3em] text-white/75">
+        <p className="mb-5 text-[11px] uppercase tracking-[0.35em] text-[#d4a574]">
           Rooftop Bar &amp; Terrace
         </p>
-        <h1 className="nt-display text-6xl font-light italic text-white sm:text-7xl lg:text-8xl">
+        <h1 className="nt-display text-6xl font-light italic text-[#f0ece4] sm:text-7xl lg:text-[6.5rem] lg:leading-none">
           Nightfall Terrace
         </h1>
-        <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-white/80">
+        <p className="mt-6 max-w-md text-sm font-light leading-relaxed text-[#8b9bb4]">
           High above the city, where the night begins
           and the view never gets old.
         </p>
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
           <a
             href="#reservation"
-            className="inline-flex items-center justify-center border border-white px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-white hover:bg-white hover:text-[#1a1a18] transition-colors duration-300"
+            className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-300"
           >
             Reserve a table
           </a>
           <a
-            href="/about"
-            className="text-[11px] uppercase tracking-[0.2em] text-white/75 hover:text-white transition-colors duration-200"
+            href="/events"
+            className="text-[11px] uppercase tracking-[0.2em] text-[#8b9bb4] hover:text-[#f0ece4] transition-colors duration-200"
           >
-            Discover more
+            Upcoming events →
           </a>
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-0 right-0 flex justify-center">
-        <div className="h-10 w-px bg-white/40" />
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-0 right-0 flex flex-col items-center gap-2">
+        <span className="text-[9px] uppercase tracking-[0.3em] text-[#4a5872]">Scroll</span>
+        <div className="h-10 w-px bg-gradient-to-b from-[#4a5872] to-transparent" />
       </div>
     </section>
   );

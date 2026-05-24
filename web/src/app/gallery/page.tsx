@@ -34,10 +34,11 @@ function GalleryImage({ shot, ratio, onClick }: GalleryImageProps) {
           fill
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0e1a]/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
       <div className="mt-3 flex items-baseline justify-between">
-        <p className="nt-display text-base font-light text-[#1a1a18]">{shot.title}</p>
-        <p className="text-xs text-[#6b6b68]">{shot.sub}</p>
+        <p className="nt-display text-base font-light text-[#f0ece4]">{shot.title}</p>
+        <p className="text-xs text-[#8b9bb4]">{shot.sub}</p>
       </div>
     </div>
   );
@@ -54,27 +55,22 @@ export default function GalleryPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#f7f5f2] pt-16">
-        {/* Page header */}
-        <div className="border-b border-[#e2e0db]">
+      <main className="min-h-screen bg-[#0a0e1a] pt-16">
+        <div className="border-b border-[#1e2d40]">
           <div className="nt-container py-16 sm:py-20">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-[#c8a96e]">Nightfall Terrace</p>
-            <h1 className="nt-display mt-3 text-5xl font-light italic text-[#1a1a18] sm:text-6xl">Gallery</h1>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#6b6b68]">
+            <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Nightfall Terrace</p>
+            <h1 className="nt-display mt-3 text-5xl font-light italic text-[#f0ece4] sm:text-6xl">Gallery</h1>
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#8b9bb4]">
               A look at the terrace across the evening — from golden hour through to the last call.
             </p>
           </div>
         </div>
 
-        {/* Grid */}
         <div className="nt-container py-16 sm:py-20">
-          {/* Row 1: two wide landscape shots */}
           <div className="grid gap-4 sm:grid-cols-2">
             <GalleryImage shot={shots[0]} ratio="aspect-[16/10]" onClick={() => open(0)} />
             <GalleryImage shot={shots[1]} ratio="aspect-[16/10]" onClick={() => open(1)} />
           </div>
-
-          {/* Row 2: one tall portrait + two stacked */}
           <div className="mt-4 grid gap-4 sm:grid-cols-2">
             <GalleryImage shot={shots[2]} ratio="aspect-[3/4]" onClick={() => open(2)} />
             <div className="grid gap-4 content-start">
@@ -82,8 +78,6 @@ export default function GalleryPage() {
               <GalleryImage shot={shots[4]} ratio="aspect-[4/3]" onClick={() => open(4)} />
             </div>
           </div>
-
-          {/* Row 3: three equal columns */}
           <div className="mt-4 grid gap-4 sm:grid-cols-3">
             <GalleryImage shot={shots[5]} ratio="aspect-[4/3]" onClick={() => open(5)} />
             <GalleryImage shot={shots[6]} ratio="aspect-[4/3]" onClick={() => open(6)} />
@@ -91,22 +85,21 @@ export default function GalleryPage() {
           </div>
         </div>
 
-        {/* CTA */}
-        <div className="border-t border-[#e2e0db]">
+        <div className="border-t border-[#1e2d40]">
           <div className="nt-container py-16 text-center">
-            <p className="nt-display text-3xl font-light italic text-[#1a1a18] sm:text-4xl">
+            <p className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
               Experience it in person
             </p>
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Link
                 href="/#reservation"
-                className="inline-flex items-center justify-center border border-[#1a1a18] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-white transition-colors duration-200"
+                className="inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200"
               >
                 Reserve a table
               </Link>
               <Link
                 href="/about"
-                className="text-[11px] uppercase tracking-[0.2em] text-[#6b6b68] hover:text-[#1a1a18] transition-colors"
+                className="text-[11px] uppercase tracking-[0.2em] text-[#8b9bb4] hover:text-[#f0ece4] transition-colors"
               >
                 About the terrace
               </Link>
@@ -117,13 +110,7 @@ export default function GalleryPage() {
       <Footer />
 
       {lightboxIndex !== null && (
-        <Lightbox
-          shots={shots}
-          index={lightboxIndex}
-          onClose={close}
-          onPrev={prev}
-          onNext={next}
-        />
+        <Lightbox shots={shots} index={lightboxIndex} onClose={close} onPrev={prev} onNext={next} />
       )}
     </>
   );

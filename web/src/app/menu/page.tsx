@@ -48,15 +48,15 @@ type MenuItem = { name: string; desc: string; price: number };
 function MenuCategory({ title, items }: { title: string; items: MenuItem[] }) {
   return (
     <div>
-      <h3 className="nt-display mb-6 text-2xl font-light italic text-[#1a1a18]">{title}</h3>
-      <ul className="divide-y divide-[#e2e0db]">
+      <h3 className="nt-display mb-6 text-2xl font-light italic text-[#f0ece4]">{title}</h3>
+      <ul className="divide-y divide-[#1e2d40]">
         {items.map((item) => (
           <li key={item.name} className="flex items-baseline justify-between gap-8 py-5">
             <div className="min-w-0">
-              <p className="text-sm font-medium text-[#1a1a18]">{item.name}</p>
-              <p className="mt-1 text-xs leading-relaxed text-[#6b6b68]">{item.desc}</p>
+              <p className="text-sm font-medium text-[#f0ece4]">{item.name}</p>
+              <p className="mt-1 text-xs leading-relaxed text-[#8b9bb4]">{item.desc}</p>
             </div>
-            <span className="shrink-0 text-sm text-[#1a1a18]">${item.price}</span>
+            <span className="shrink-0 text-sm text-[#d4a574]">${item.price}</span>
           </li>
         ))}
       </ul>
@@ -72,15 +72,14 @@ export default function MenuPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen bg-[#f7f5f2] pt-16">
-        {/* Page header */}
-        <div className="border-b border-[#e2e0db]">
+      <main className="min-h-screen bg-[#0a0e1a] pt-16">
+        <div className="border-b border-[#1e2d40]">
           <div className="nt-container py-16 sm:py-20">
-            <p className="text-[11px] uppercase tracking-[0.25em] text-[#c8a96e]">Nightfall Terrace</p>
-            <h1 className="nt-display mt-3 text-5xl font-light italic text-[#1a1a18] sm:text-6xl">
+            <p className="text-[11px] uppercase tracking-[0.25em] text-[#d4a574]">Nightfall Terrace</p>
+            <h1 className="nt-display mt-3 text-5xl font-light italic text-[#f0ece4] sm:text-6xl">
               Our menus
             </h1>
-            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#6b6b68]">
+            <p className="mt-4 max-w-md text-sm leading-relaxed text-[#8b9bb4]">
               Curated for the evening — signature cocktails, small plates, and
               dishes worth lingering over.
             </p>
@@ -88,7 +87,7 @@ export default function MenuPage() {
         </div>
 
         {/* Tab bar */}
-        <div className="sticky top-16 z-40 border-b border-[#e2e0db] bg-[#f7f5f2]">
+        <div className="sticky top-16 z-40 border-b border-[#1e2d40] bg-[#0a0e1a]/95 backdrop-blur-md">
           <div className="nt-container">
             <div className="flex gap-8">
               {(["drinks", "food"] as Tab[]).map((t) => (
@@ -98,8 +97,8 @@ export default function MenuPage() {
                   className={[
                     "py-4 text-[11px] uppercase tracking-[0.2em] transition-colors duration-150 border-b-2 -mb-px",
                     tab === t
-                      ? "border-[#1a1a18] text-[#1a1a18]"
-                      : "border-transparent text-[#6b6b68] hover:text-[#1a1a18]",
+                      ? "border-[#d4a574] text-[#d4a574]"
+                      : "border-transparent text-[#8b9bb4] hover:text-[#f0ece4]",
                   ].join(" ")}
                 >
                   {t === "drinks" ? "Drinks" : "Food"}
@@ -109,7 +108,6 @@ export default function MenuPage() {
           </div>
         </div>
 
-        {/* Menu content */}
         <div className="nt-container py-16 sm:py-20">
           {tab === "drinks" && (
             <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
@@ -128,18 +126,17 @@ export default function MenuPage() {
           )}
         </div>
 
-        {/* Reservation CTA */}
-        <div className="border-t border-[#e2e0db]">
+        <div className="border-t border-[#1e2d40]">
           <div className="nt-container py-16 text-center">
-            <p className="nt-display text-3xl font-light italic text-[#1a1a18] sm:text-4xl">
+            <p className="nt-display text-3xl font-light italic text-[#f0ece4] sm:text-4xl">
               Ready for the evening?
             </p>
-            <p className="mt-3 text-sm text-[#6b6b68]">
+            <p className="mt-3 text-sm text-[#8b9bb4]">
               Secure your table with a deposit — takes under a minute.
             </p>
             <Link
               href="/#reservation"
-              className="mt-8 inline-flex items-center justify-center border border-[#1a1a18] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#1a1a18] hover:bg-[#1a1a18] hover:text-white transition-colors duration-200"
+              className="mt-8 inline-flex items-center justify-center border border-[#d4a574] px-8 py-3 text-[11px] uppercase tracking-[0.2em] text-[#d4a574] hover:bg-[#d4a574] hover:text-[#0a0e1a] transition-colors duration-200"
             >
               Reserve a table
             </Link>
