@@ -11,6 +11,26 @@ export default function Footer() {
             <p className="nt-display text-xl font-light italic text-[#f0ece4]">Nightfall Terrace</p>
             <p className="text-xs text-[#8b9bb4]">34th Floor, Nocturne Bay</p>
             <p className="text-xs text-[#4a5872]">Tue–Sun · 5 PM – 1 AM</p>
+            <p className="text-xs text-[#4a5872] pt-2">+1 (555) 0142</p>
+            <p className="text-xs text-[#4a5872]">hello@nightfall.terrace</p>
+            <div className="flex gap-3 pt-3">
+              <a
+                href="https://instagram.com/nightfallterrace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] uppercase tracking-[0.16em] text-[#8b9bb4] hover:text-[#d4a574] transition-colors"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://tiktok.com/@nightfallterrace"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] uppercase tracking-[0.16em] text-[#8b9bb4] hover:text-[#d4a574] transition-colors"
+              >
+                TikTok
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-10 text-[11px] uppercase tracking-[0.16em] sm:grid-cols-3">
@@ -27,17 +47,24 @@ export default function Footer() {
               <p className="text-[#d4a574]">Visit</p>
               <ul className="space-y-3 text-[#8b9bb4]">
                 <li><Link href="/#reservation" className="hover:text-[#f0ece4] transition-colors">Reservations</Link></li>
-                <li><Link href="/admin" className="hover:text-[#f0ece4] transition-colors">Admin</Link></li>
+                <li><Link href="/admin" className="hover:text-[#f0ece4] transition-colors">Admin demo</Link></li>
               </ul>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-[#243447] pt-6 flex items-center justify-between gap-4">
+        <div className="mt-12 border-t border-[#243447] pt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[10px] uppercase tracking-[0.2em] text-[#4a5872]">
             © {new Date().getFullYear()} Nightfall Terrace. All rights reserved.
           </p>
-          <p className="text-[10px] text-[#4a5872]">Built with Next.js</p>
+          <a
+            href="https://plex.ee"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[10px] uppercase tracking-[0.2em] text-[#4a5872] hover:text-[#d4a574] transition-colors"
+          >
+            Built by Plex ↗
+          </a>
         </div>
       </div>
     </footer>
